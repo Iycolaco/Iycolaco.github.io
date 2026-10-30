@@ -1,0 +1,44 @@
+body{
+    background-color: LemonChiffon;
+    text-align:center;
+}
+ul{
+    display:flex;
+    list-style-type:none;
+    padding: 0px;
+    margin:0px;
+    justify-content:space-around;
+}
+a{
+    padding:10px;
+    text-decoration:none;
+    color:black;
+    font-size:15px;
+}
+a:hover{
+    padding:10px;
+    background-color:skyblue;
+    border: 2px black solid;
+    text-decoration:none;
+    font-size:20px;
+}
+nav{
+    padding:20px;
+    border:3px black solid;
+    background-color:aliceblue;
+}
+header{
+    background-color:powderblue;
+    text-align:center;
+    border: 1px black solid;
+}
+table,th,tr,td{
+    text-align:center;
+    width: 100%;
+    border: 1px black solid;
+    border-radius:10px;
+}
+caption{
+    font-size:15px;
+    font-weight: bolder;
+}
