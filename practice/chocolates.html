@@ -1,0 +1,164 @@
+ <html>
+    <head>
+        <style>
+            body{
+                background: linear-gradient(135deg, #1a2980, #26d0ce);
+                height: 100vh;
+            }
+            h1{
+                text-align: center;
+                font-family: Tahoma, sans-serif;
+                color: white;
+            }
+            .container {
+              display: grid;
+              width: 80vw;
+              height: 80vh;
+              margin: auto;
+              grid-template-columns: 1fr 1fr 1fr;
+              grid-template-rows: 1fr 1fr 1fr;
+              background-color: Thistle;
+              padding: 10px;
+              border-radius: 20px;
+              border: 8px solid red;
+            }
+            .heart {
+              height: 20vh; /* adjust to control the size */
+              aspect-ratio: 1;
+              --_m: radial-gradient(#000 69%,#0000 70%) 84.5%/50%;
+              -webkit-mask-box-image: var(--_m);
+                         mask-border: var(--_m);
+              clip-path: polygon(-41% 0,50% 91%, 141% 0);
+              background-color: chocolate;
+              margin: auto;
+            }
+            #chocolateheart1{
+                grid-column-start: 1;
+                grid-row:2;
+            }
+            #chocolateheart2{
+                grid-column-start: 2;
+                grid-row-start:2;
+            }
+            #chocolateheart3{
+                grid-column-start: 3;
+                grid-row-start:2;
+            }
+            .lilbits1{
+                grid-row-start: 1;
+                grid-column-start: 1;
+                display: grid;
+              grid-template-columns: 1fr 1fr 1fr;
+              grid-template-rows: 1fr 1fr 1fr;
+            }
+            #mnm{
+                width:10vh;
+                height:10vh;
+                border-radius:50%;
+                margin: auto;
+                display: grid;
+                place-items: center;
+                font-size: 2em;
+            }
+            .bar{
+                grid-row:3/3;
+                grid-column: 1/4;
+                background-color:#402e1c;
+                text-align:center;
+                color:white;
+                font-size:4em
+            }
+            .bar2{
+                grid-row:1/1;
+                grid-column: 2/4;
+                background-color:#402e1c;
+                text-align:center;
+                -webkit-text-stroke: 5px green;
+                color:white;
+                font-size:4em
+            
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Here, I got you some chocolates &lt;3</h1>
+        <div class="container">
+            <div class="bar">
+                <p><strong>Hershey's</strong></p></div>
+            <div class="bar2">
+                <p><strong>MilkyWay</strong></p></div>
+            <div class="heart" id="chocolateheart1"></div>
+            <div class="heart" id="chocolateheart2"></div>
+            <div class="heart" id="chocolateheart3"></div>
+        <div class="lilbits1">
+                <div id="mnm"
+                style="
+                background-color:red;
+                grid-column-start: 1;
+                grid-row-start: 1">
+                m
+                </div>
+                <div id="mnm"
+                style="
+                background-color:blue;
+                grid-column-start: 2;
+                grid-row-start: 1">
+                m
+                </div>
+                <div id="mnm"
+                style="
+                background-color:yellow;
+                grid-column-start: 3;
+                grid-row-start: 1">
+                m
+                </div>
+                <div id="mnm"
+                style="
+                background-color:purple;
+                grid-column-start: 1;
+                grid-row-start: 2">
+                m
+                </div>
+                <div id="mnm"
+                style="
+                background-color:brown;
+                grid-column-start: 2;
+                grid-row-start: 2">
+                m
+                </div>
+                <div id="mnm"
+                style="
+                background-color:pink;
+                grid-column-start: 3;
+                grid-row-start: 2">
+                m
+                </div>
+                <div id="mnm"
+                style="
+                background-color:green;
+                grid-column-start: 1;
+                grid-row-start: 3">
+                m
+                </div>
+                <div id="mnm"
+                style="
+                background-color:orange;
+                grid-column-start: 2;
+                grid-row-start: 3">
+                m
+                </div>
+                <div id="mnm"
+                style="
+                background-color:white;
+                grid-column-start: 3;
+                grid-row-start: 3">
+                m
+                </div>
+                <!-- TODO: Add some more divs here, and style them
+                    to fill in the 'lilbits' part of the chocolate box -->
+            </div>
+            <!-- TODO: Add some more divs here, and style them
+                to fill in the other sections of the chocolate box -->
+        </div>
+    </body>
+</html> 
