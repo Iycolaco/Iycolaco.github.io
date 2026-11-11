@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Page</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: system-ui, sans-serif; max-width: 900px; margin: 0 auto; }
+    img { display: block; width: 100%; background: #ddd; }
+    h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+    h2 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+    h3 { font-size: 1.2rem; margin-bottom: 0.5rem; }
+    p { color: #555; line-height: 1.6; margin-bottom: 0.5rem; }
+    button { padding: 0.5rem 1.5rem; border: none; border-radius: 5px; background: #333; color: #fff; cursor: pointer; }
+    nav { display: flex; gap: 1rem; }
+    nav a { text-decoration: none; color: inherit; }
+    input[type="text"] { padding: 0.4rem 0.75rem; border: 1px solid #ccc; border-radius: 5px; font-size: 1rem; width: 100%; }
+    label { display: flex; align-items: center; gap: 0.5rem; }
+    /* Layout */
+    .c1 {
+      display: grid;
+      grid:
+        'icon icon icon .    .      .      .' 50px
+        'icon icon icon .    search search search' 50px
+        'head head head head head   head   head' auto
+        'img  img  img  img  img    img    img' auto
+        'img  img  img  img  img    img    img' auto
+        'nav  nav  nav  nav  nav    nav    nav' auto
+        / 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      gap: 2rem;
+    }
+    .c2 {
+      display: grid;
+      grid:
+        'h1 .' 60px
+        'h1 h2' 60px
+        / 1fr 1fr;
+      gap: 0.5rem;
+      grid-area: icon;
+    }
+    .c3 {
+      grid-area: h1;
+      font-size:90px;
+    }
+    .c4 {
+      grid-area: h2;
+    }
+    .c5 {
+      grid-area: head;
+      text-align: center;
+    }
+    .c6 {
+      display: grid;
+      grid:
+        'i b' auto
+        / 3fr 1fr;
+      gap: 0.5rem;
+      grid-area: search;
+    }
+    .c7 {
+      grid-area: i;
+    }
+    .c8 {
+      grid-area: b;
+    }
+    .c9 {
+      grid-area: nav;
+    }
+    .c10 {
+      display: grid;
+      grid:
+        'vid   vid   vid   blog' 115px
+        'vid   vid   vid   blog' 115px
+        'vid   vid   vid   mag' 115px
+        'vid   vid   vid   mag' 140px
+        'more1 more2 more3 more4' auto
+        'more1 more2 more3 more4' auto
+        / 1fr 1fr 1fr 1fr;
+      grid-area: img;
+      padding: 2rem;
+    }
+    .c11 {
+      grid-area: vid;
+    }
+    .c12 {
+      aspect-ratio: 4 / 3;
+    }
+    .c13 {
+      grid-area: mag;
+      padding: 1rem;
+    }
+    .c14 {
+      aspect-ratio: 1;
+    }
+    .c15 {
+      grid-area: blog;
+      padding: 1rem;
+    }
+    .c16 {
+      aspect-ratio: 1;
+    }
+    .c17 {
+      grid-area: more1;
+      padding: 1rem;
+    }
+    .c18 {
+      aspect-ratio: 1;
+    }
+    .c19 {
+      grid-area: more2;
+      padding: 1rem;
+    }
+    .c20 {
+      aspect-ratio: 1;
+    }
+    .c21 {
+      grid-area: more3;
+      padding: 1rem;
+    }
+    .c22 {
+      aspect-ratio: 1;
+    }
+    .c23 {
+      grid-area: more4;
+      padding: 1rem;
+    }
+    .c24 {
+      aspect-ratio: 1;
+    }
+    .c25 {
+      padding: 2rem;
+    }
+    .c26 {
+      text-align: center;
+    }
+    .c27 {
+      display: grid;
+      grid:
+        'plan research ask' auto
+        'p    r        a' auto
+        / 1fr 1fr 1fr;
+      gap: 2rem;
+      padding: 1rem;
+    }
+    .c28 {
+      grid-area: plan;
+      aspect-ratio: 8 / 3;
+    }
+    .c29 {
+      grid-area: research;
+      aspect-ratio: 8 / 3;
+    }
+    .c30 {
+      grid-area: ask;
+      aspect-ratio: 8 / 3;
+    }
+    .c31 {
+      grid-area: p;
+    }
+    .c32 {
+      grid-area: r;
+    }
+    .c33 {
+      grid-area: a;
+    }
+    .c34 {
+      display: grid;
+      grid:
+        'div div    div' auto
+        '.   button .' auto
+        / 1fr 1fr 1fr;
+      padding: 2rem;
+    }
+    .c35 {
+      display: grid;
+      grid:
+        'c1 c2 c3 c4' auto
+        'c1 c2 c3 c4' auto
+        'c1 c2 c3 c4' auto
+        / 1fr 1fr 1fr 1fr;
+      grid-area: div;
+      padding: 2rem;
+    }
+    .c36 {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 110px 75px 50px;
+      gap: 2rem;
+      grid-area: c1;
+      padding: 2rem;
+    }
+    .c37 {
+      aspect-ratio: 1;
+    }
+    .c38 {
+      aspect-ratio: 4 / 3;
+    }
+    .c39 {
+      aspect-ratio: 8 / 3;
+    }
+    .c40 {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 75px 80px 60px;
+      gap: 2rem;
+      grid-area: c2;
+      padding: 2rem;
+    }
+    .c41 {
+      aspect-ratio: 4 / 3;
+    }
+    .c42 {
+      aspect-ratio: 4 / 3;
+    }
+    .c43 {
+      aspect-ratio: 8 / 3;
+    }
+    .c44 {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 30px 155px 125px;
+      gap: 2rem;
+      grid-area: c3;
+      padding: 2rem;
+    }
+    .c45 {
+      aspect-ratio: 8 / 3;
+    }
+    .c46 {
+      aspect-ratio: 3 / 4;
+    }
+    .c47 {
+      aspect-ratio: 3 / 4;
+    }
+    .c48 {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 75px 75px auto;
+      gap: 2rem;
+      grid-area: c4;
+      padding: 2rem;
+    }
+    .c49 {
+      aspect-ratio: 4 / 3;
+    }
+    .c50 {
+      aspect-ratio: 4 / 3;
+    }
+    .c51 {
+      aspect-ratio: 8 / 3;
+    }
+    .c52 {
+      grid-area: button;
+    }
+    .c53 {
+      display: grid;
+      grid:
+        '. follow icon icon icon survey .' auto
+        'a b      c    .    .    d      e' auto
+        / 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      gap: 2rem;
+      padding: 0.5rem;
+    }
+    .c54 {
+      grid-area: follow;
+    }
+    .c55 {
+      display: grid;
+      grid:
+        'f x y p d i a l m' auto
+        / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      gap: 0.5rem;
+      grid-area: icon;
+    }
+    .c56 {
+      grid-area: f;
+      aspect-ratio: 1;
+    }
+    .c57 {
+      grid-area: x;
+      aspect-ratio: 1;
+    }
+    .c58 {
+      grid-area: y;
+      aspect-ratio: 1;
+    }
+    .c59 {
+      grid-area: p;
+      aspect-ratio: 1;
+    }
+    .c60 {
+      grid-area: d;
+      aspect-ratio: 1;
+    }
+    .c61 {
+      aspect-ratio: 1;
+    }
+    .c62 {
+      aspect-ratio: 1;
+    }
+    .c63 {
+      grid-area: l;
+      aspect-ratio: 1;
+    }
+    .c64 {
+      grid-area: m;
+      aspect-ratio: 1;
+    }
+    .c65 {
+      grid-area: survey;
+    }
+    .c66 {
+      grid-area: a;
+    }
+    .c67 {
+      grid-area: b;
+    }
+    .c68 {
+      grid-area: c;
+    }
+    .c69 {
+      grid-area: d;
+      aspect-ratio: 8 / 3;
+    }
+    .c70 {
+      grid-area: e;
+      aspect-ratio: 8 / 3;
+    }
+  </style>
+</head>
+<body>
+<header class="c1">
+  <div class="c2">
+    <h1 class="c3">Library</h1>
+    <h3 class="c4">Library of Congress</h3>
+  </div>
+  <h2 class="c5">Section Heading</h2>
+  <div class="c6">
+    <input type="text" placeholder="Enter text" class="c7">
+    <button class="c8">Click me</button>
+  </div>
+  <nav class="c9">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Work</a>
+    <a href="#">Contact</a>
+  </nav>
+  <section class="c10">
+    <div class="c11">
+      <img src="placeholder.jpg" alt="" class="c12">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor</p>
+    </div>
+    <div class="c13">
+      <img src="placeholder.jpg" alt="" class="c14">
+      <p>Lorem ipsum dolor sit amet, consectetur</p>
+    </div>
+    <div class="c15">
+      <img src="placeholder.jpg" alt="" class="c16">
+      <p>Lorem ipsum dolor sit amet, consectetur</p>
+    </div>
+    <div class="c17">
+      <img src="placeholder.jpg" alt="" class="c18">
+      <p>Lorem ipsum dolor sit amet, consectetur</p>
+    </div>
+    <div class="c19">
+      <img src="placeholder.jpg" alt="" class="c20">
+      <p>Lorem ipsum dolor sit amet, consectetur</p>
+    </div>
+    <div class="c21">
+      <img src="placeholder.jpg" alt="" class="c22">
+      <p>Lorem ipsum dolor sit amet, consectetur</p>
+    </div>
+    <div class="c23">
+      <img src="placeholder.jpg" alt="" class="c24">
+      <p>Lorem ipsum dolor sit amet, consectetur</p>
+    </div>
+  </section>
+</header>
+<main>
+  <section class="c25">
+    <h2 class="c26">Section Heading</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore</p>
+    <div class="c27">
+      <img src="placeholder.jpg" alt="" class="c28">
+      <img src="placeholder.jpg" alt="" class="c29">
+      <img src="placeholder.jpg" alt="" class="c30">
+      <p class="c31">Lorem ipsum dolor sit amet </p>
+      <p class="c32">Lorem ipsum dolor sit amet </p>
+      <p class="c33">Lorem ipsum dolor sit amet </p>
+    </div>
+  </section>
+  <section class="c34">
+    <div class="c35">
+      <div class="c36">
+        <img src="placeholder.jpg" alt="" class="c37">
+        <img src="placeholder.jpg" alt="" class="c38">
+        <img src="placeholder.jpg" alt="" class="c39">
+      </div>
+      <div class="c40">
+        <img src="placeholder.jpg" alt="" class="c41">
+        <img src="placeholder.jpg" alt="" class="c42">
+        <img src="placeholder.jpg" alt="" class="c43">
+      </div>
+      <div class="c44">
+        <img src="placeholder.jpg" alt="" class="c45">
+        <img src="placeholder.jpg" alt="" class="c46">
+        <img src="placeholder.jpg" alt="" class="c47">
+      </div>
+      <div class="c48">
+        <img src="placeholder.jpg" alt="" class="c49">
+        <img src="placeholder.jpg" alt="" class="c50">
+        <img src="placeholder.jpg" alt="" class="c51">
+      </div>
+    </div>
+    <button class="c52">Click me</button>
+  </section>
+</main>
+<footer class="c53">
+  <p class="c54">Lorem ipsum</p>
+  <div class="c55">
+    <img src="placeholder.jpg" alt="" class="c56">
+    <img src="placeholder.jpg" alt="" class="c57">
+    <img src="placeholder.jpg" alt="" class="c58">
+    <img src="placeholder.jpg" alt="" class="c59">
+    <img src="placeholder.jpg" alt="" class="c60">
+    <img src="placeholder.jpg" alt="" class="c61">
+    <img src="placeholder.jpg" alt="" class="c62">
+    <img src="placeholder.jpg" alt="" class="c63">
+    <img src="placeholder.jpg" alt="" class="c64">
+  </div>
+  <p class="c65">Lorem ipsum</p>
+  <p class="c66">Lorem ipsum dolor sit amet, consectetur</p>
+  <p class="c67">Lorem ipsum dolor sit amet, consectetur</p>
+  <p class="c68">Lorem ipsum dolor sit amet, consectetur</p>
+  <img src="placeholder.jpg" alt="" class="c69">
+  <img src="placeholder.jpg" alt="" class="c70">
+</footer>
+  <script>
+  (function() {
+    var s = document.createElement("script");
+    s.src = "https://cdn.jsdelivr.net/gh/gracehoppercenter/validate@1.0.5/validate.js";
+    s.async = false;
+    document.head.appendChild(s);
+  })();
+  </script>
+</body>
+</html>
+
+
