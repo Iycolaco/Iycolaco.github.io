@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Page</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: system-ui, sans-serif; max-width: 900px; margin: 0 auto; }
+    img { display: block; width: 100%; background: #ddd; }
+    h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+    h2 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+    h3 { font-size: 1.2rem; margin-bottom: 0.5rem; }
+    p { color: #555; line-height: 1.6; margin-bottom: 0.5rem; }
+    button { padding: 0.5rem 1.5rem; border: none; border-radius: 5px; background: #333; color: #fff; cursor: pointer; }
+    nav { display: flex; gap: 1rem; }
+    nav a { text-decoration: none; color: inherit; }
+    /* Layout */
+    .c1 {
+      display: grid;
+      grid:
+        'p p .' auto
+        'i i i' 12rem
+        'i i i' auto
+        'h . .' 50px
+        'n n .' auto
+        / 1fr 1fr 1fr;
+      padding: 2rem;
+    }
+    body{
+        background-color:deeppink;
+        }
+    h1,h2,nav{
+        color:cyan;
+    }
+    .c2 {
+      grid-area: p;
+    }
+    .c3 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      grid-area: i;
+      padding: 1rem;
+    }
+    .c4 {
+      display: inline-block;
+      vertical-align: middle;
+      width: 30%;
+      aspect-ratio: 4 / 3;
+    }
+    .c5 {
+      grid-area: h;
+    }
+    .c6 {
+      grid-area: n;
+    }
+    .c7 {
+      padding: 1rem;
+    }
+    .c8 {
+      display: grid;
+      grid:
+        'i i i' 33%
+        'i i i' 50%
+        'h h .' 2vw
+        'p p .' 2vh
+        'b . .' auto
+        / 1fr 3fr 3fr;
+      gap: 0.5rem;
+      padding: 2rem;
+    }
+    .c9 {
+      grid-area: i;
+      aspect-ratio: 4 / 3;
+    }
+    .c10 {
+      grid-area: h;
+    }
+    .c11 {
+      grid-area: p;
+    }
+    .c12 {
+      grid-area: b;
+    }
+    .c13 {
+      display: grid;
+      grid:
+        'a  b   c' 2rem
+        'aa ba  .' 1rem
+        'ab bb  .' 1rem
+        'ac .   .' 1rem
+        'ad .   .' 1rem
+        'ae .   .' 1rem
+        '.  val .' auto
+        / 1fr 1fr 1fr;
+      gap: 0.5rem;
+      padding: 2rem;
+    }
+    .c14 {
+      grid-area: a;
+    }
+    .c15 {
+      grid-area: b;
+    }
+    .c16 {
+      grid-area: c;
+    }
+    .c17 {
+      grid-area: aa;
+    }
+    .c18 {
+      grid-area: ba;
+    }
+    .c19 {
+      grid-area: ab;
+    }
+    .c20 {
+      grid-area: bb;
+    }
+    .c21 {
+      grid-area: ac;
+    }
+    .c22 {
+      grid-area: ad;
+    }
+    .c23 {
+      grid-area: ae;
+    }
+    .c24 {
+        grid-area: val;
+    }
+  </style>
+</head>
+<body>
+<header class="c1">
+  <p class="c2">Farmstandia at 123 Dinosaur St.</p>
+  <div class="c3">
+    <img src="../images/dino.png" alt="dinosaur" class="c4">
+  </div>
+  <h1 class="c5">Farmstandia</h1>
+  <nav class="c6">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Work</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
+<main class="c7">
+  <section class="c8">
+    <img src="../images/farm.jpg" alt="farm" class="c9">
+    <h2 class="c10">Purchase</h2>
+    <p class="c11">Buy our delicious, fresh corn!</p>
+    <button class="c12">Buy Here</button>
+  </section>
+</main>
+<footer class="c13">
+  <h3 class="c14">Follow us!!!!!!!!!</h3>
+  <h3 class="c15">Contact us!!!</h3>
+  <h3 class="c16"><a href="#">Other locations</a></h3>
+  <p class="c17">Instagram</p>
+  <a href="mailto:farmstand@gmail.com">farmstand@gmail.com</a>
+  <p class="c19">Twitter</p>
+  <a href="tel:+2484345508">Call or text at 248-434-5508</a>
+  <p class="c21">Youtube</p>
+  <p class="c22">Facebook</p>
+  <p class="c23">TiKTok</p>
+</footer>
+  <script class="c24">
+  (function() {
+    var s = document.createElement("script");
+    s.src = "https://cdn.jsdelivr.net/gh/gracehoppercenter/validate@1.0.5/validate.js";
+    s.async = false;
+    document.head.appendChild(s);
+  })();
+  </script>
+</body>
+</html>
